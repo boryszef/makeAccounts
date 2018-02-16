@@ -1,0 +1,16 @@
+makeAccounts.py is a Python script to facilitate creation of student's accounts
+in computer classroom with Linux. It performs several, rather trivial tasks in
+an automated way. The scenario is that there are teachers and each teacher
+needs a number of student accounts.
+
+Operation:
+. the script finds free UIDs and makes sure that the added accounts have continuous UIDs
+. backups passwd, shadow, group and exports
+. generates random password (the same for all) and adds entries to passwd and shadow
+. stores the password in a file located in the teacher's home directory
+. adds entries to exportfs (for NFS) and calls exportfs
+. creates a group for the students and adds to group file
+. makes home directories and extracts skeleton files
+
+
+It can also add more accounts for a teacher that already has some.
